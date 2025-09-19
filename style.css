@@ -2,29 +2,33 @@ body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   text-align: center;
-  padding: 30px;
+  padding: 5vw; /* relativo al ancho de pantalla */
+  margin: 0;
 }
 
 h1 {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  font-size: clamp(20px, 3vw, 32px); /* mínimo 20px, máximo 32px */
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 300px;
+  gap: 1rem;
+  max-width: 350px; /* no se estira infinito en PC */
   margin: 0 auto;
+  width: 100%;
 }
 
 .menu button {
-  padding: 14px;
-  font-size: 18px;
+  padding: clamp(10px, 2vw, 16px);  /* adaptable */
+  font-size: clamp(14px, 2vw, 18px);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.2s;
+  width: 100%;
 }
 
 .menu button:hover {
