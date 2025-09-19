@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador Congruencial Mixto</title>
+  <link rel="stylesheet" href="mixto.css">
+</head>
+<body>
+  <div class="boton" >
+    <button type="button" onclick="window.location.href = '../index.html'" >Menu</button>
+  </div>
+  <h1>Generador Congruencial Mixto</h1>
+  <form id="form">
+    <label>Semilla (X0): <input type="number" id="x0" required></label><br>
+    <label>Multiplicador (a): <input type="number" id="a" required></label><br>
+    <label>Constante (c): <input type="number" id="c" required></label><br>
+    <label>Multiplicador (m): <input type="number" id="m" required></label><br>
+
+    <!-- Contenedor para alinear los botones -->
+    <div class="botones">
+      <button type="submit">Generar</button>
+    <button type="button" onclick="window.location.href='../historial_mixto/h_mixto.html'">
+      📜 Ver Historial
+    </button>
+    </div>
+  </form>
+
+  <div id="resultado"></div>
+
+  <!-- Firebase + Script -->
+  <script type="module" src="mixto.js"></script>
+</body>
+</html>

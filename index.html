@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generador Congruencial Mixto</title>
+  <title>Generadores Congruenciales</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <h1>Generador Congruencial Mixto</h1>
-  
-  <label>Semilla (X0): <input type="number" id="x0"></label><br>
-  <label>Multiplicador (a): <input type="number" id="a"></label><br>
-  <label>Constante (c): <input type="number" id="c"></label><br>
-  <label>Módulo (m): <input type="number" id="m"></label><br>
-  
-  <button onclick="generar()">Generar</button>
+  <h1>🔢 Generadores Congruenciales</h1>
+  <p>Selecciona el método con el que deseas trabajar:</p>
 
-  <div id="resultado"></div>
-
-  
+  <div class="menu">
+    <button onclick="window.location.href='mixto/mixto.html'">
+      ➕ Generador Congruencial Mixto
+    </button>
+    <button onclick="window.location.href='multiplicar/multiplicar.html'">
+      ✖ Generador Congruencial Multiplicativo
+    </button>
+  </div>
 </body>
 </html>

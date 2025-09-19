@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  margin: 8px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  width: 100px;
+  text-align: center;
+}
+
+.botones {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  gap: 8px;
+  flex-wrap: wrap; /* Permite que salten a otra fila si no caben */
+}
+
+.botones button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 100px;
+  max-width: 140px; /* Para que no sean enormes */
+  text-align: center;
+}
+
+/* Botón generar */
+.botones button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Botón historial */
+.botones button[type="button"] {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Hover */
+.botones button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.boton {
+  margin-top: 15px;
+  display: flex;
+  justify-content: left; /* Centra los botones */
+  gap: 8px;
+  flex-wrap: wrap; /* Permite que salten a otra fila si no caben */
+}
+
+.boton button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 100px;
+  max-width: 140px; /* Para que no sean enormes */
+  text-align: center;
+}
+
+/* Botón generar */
+.boton button[type="button"] {
+  background-color: #f72109;
+  color: white;
+}
+
+#resultado {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #222;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  text-align: center;
+}
+
+th {
+  background: #0077cc;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
