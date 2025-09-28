@@ -12,9 +12,19 @@
   </div>
   <h1>Generador Congruencial Multiplicativo</h1>
   <form id="form">
-    <label>Semilla (X0): <input type="number" id="x0" required></label><br>
-    <label>Multiplicador (a): <input type="number" id="a" required></label><br>
-    <label>Módulo (m): <input type="number" id="m" required></label><br>
+    <form id="form">
+  
+    <label>Semilla: 
+      <input type="number" id="x0" placeholder="(X0)" required>
+    </label><br>
+    
+    <label>Multiplicador: 
+      <input type="number" id="a" placeholder="(a)" required>
+    </label><br>
+    
+    <label>Módulo: 
+      <input type="number" id="m" placeholder="(m)" required>
+    </label><br>
 
     <!-- Botones -->
     <div class="botones">
@@ -29,5 +39,15 @@
 
   <!-- Firebase + Script -->
   <script type="module" src="multiplicar.js"></script>
+
+  <script>
+    document.querySelectorAll("input[type='number']").forEach(input => {
+      input.addEventListener("click", () => {
+        if (input.value !== "") {
+          input.value = "";
+        }
+      });
+    });
+  </script>
 </body>
 </html>

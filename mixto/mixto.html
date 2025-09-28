@@ -7,22 +7,35 @@
   <link rel="stylesheet" href="mixto.css">
 </head>
 <body>
-  <div class="boton" >
-    <button type="button" onclick="window.location.href = '../index.html'" >Menu</button>
+  <div class="boton">
+    <button type="button" onclick="window.location.href = '../index.html'">Menu</button>
   </div>
+
   <h1>Generador Congruencial Mixto</h1>
   <form id="form">
-    <label>Semilla (X0): <input type="number" id="x0" required></label><br>
-    <label>Multiplicador (a): <input type="number" id="a" required></label><br>
-    <label>Constante (c): <input type="number" id="c" required></label><br>
-    <label>Multiplicador (m): <input type="number" id="m" required></label><br>
+  
+    <label>Semilla: 
+      <input type="number" id="x0" placeholder="(X0)" required>
+    </label><br>
+    
+    <label>Multiplicador: 
+      <input type="number" id="a" placeholder="(a)" required>
+    </label><br>
+    
+    <label>Constante: 
+      <input type="number" id="c" placeholder="(c)" required>
+    </label><br>
+    
+    <label>Módulo: 
+      <input type="number" id="m" placeholder="(m)" required>
+    </label><br>
 
     <!-- Contenedor para alinear los botones -->
     <div class="botones">
       <button type="submit">Generar</button>
-    <button type="button" onclick="window.location.href='../historial_mixto/h_mixto.html'">
-      📜 Ver Historial
-    </button>
+      <button type="button" onclick="window.location.href='../historial_mixto/h_mixto.html'">
+        📜 Ver Historial
+      </button>
     </div>
   </form>
 
@@ -30,5 +43,16 @@
 
   <!-- Firebase + Script -->
   <script type="module" src="mixto.js"></script>
+
+  <!-- Script para limpiar inputs al hacer clic -->
+  <script>
+    document.querySelectorAll("input[type='number']").forEach(input => {
+      input.addEventListener("click", () => {
+        if (input.value !== "") {
+          input.value = "";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
