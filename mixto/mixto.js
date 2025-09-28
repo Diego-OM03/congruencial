@@ -63,7 +63,7 @@ document.getElementById("form").addEventListener("submit", async (e) => {
   }
 
   // =============================
-  //  Renderizar tabla
+  //  Renderizar tabla + aviso
   // =============================
   let tablaHTML = `
     <table border="1">
@@ -87,6 +87,12 @@ document.getElementById("form").addEventListener("submit", async (e) => {
   });
 
   tablaHTML += `</table>`;
+  tablaHTML += `
+    <p style="color:red; font-weight:bold; margin-top:10px;">
+      ⚠️ La Secuencia se repite <br>  Se han generado ${generados.length} iteraciones.
+    </p>
+  `;
+
   document.getElementById("resultado").innerHTML = tablaHTML;
 
   // =============================
@@ -119,9 +125,4 @@ document.getElementById("form").addEventListener("submit", async (e) => {
   } catch (e) {
     console.error("Error al guardar en Firestore: ", e);
   }
-
-  window.addEventListener("DOMContentLoaded", () => {
-  generarSecuencia();
-  })
-
 });

@@ -85,6 +85,11 @@ document.getElementById("form").addEventListener("submit", async (e) => {
   });
 
   tablaHTML += `</table>`;
+  tablaHTML += `
+    <p style="color:red; font-weight:bold; margin-top:10px;">
+      ⚠️ La Secuencia se repite <br>  Se han generado ${generados.length} iteraciones.
+    </p>
+  `;
   document.getElementById("resultado").innerHTML = tablaHTML;
 
   // =============================
