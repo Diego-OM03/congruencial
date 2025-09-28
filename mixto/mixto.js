@@ -36,10 +36,10 @@ if (params) {
 document.getElementById("form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const x0 = BigInt(document.getElementById("x0").value);
-  const a = BigInt(document.getElementById("a").value);
-  const c = BigInt(document.getElementById("c").value);
-  const m = BigInt(document.getElementById("m").value);
+  const x0 = Number(document.getElementById("x0").value);
+  const a = Number(document.getElementById("a").value);
+  const c = Number(document.getElementById("c").value);
+  const m = Number(document.getElementById("m").value);
 
   // =============================
   //  Generador Congruencial Mixto
