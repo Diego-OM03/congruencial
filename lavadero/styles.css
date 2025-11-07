@@ -1,4 +1,21 @@
 /* styles.css */
+body {
+font-family: Arial, sans-serif;
+background: #f2f2f2;
+color: #222;
+margin: 0;
+padding: 0;
+}
+header {
+background: #004aad;
+color: white;
+text-align: center;
+padding: 1em;
+}
+.config, #resultados {
+background: white;
+margin: 1em auto;
+padding: 1em;
 width: 90%;
 border-radius: 10px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.2);
