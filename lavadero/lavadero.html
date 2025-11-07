@@ -1,0 +1,67 @@
+<!-- index.html -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simulador de Lavadero de Vehículos</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+<h1>Simulador de Lavadero de Vehículos</h1>
+</header>
+
+
+<section class="config">
+<h2>Configuración</h2>
+<form id="configForm">
+<div class="row">
+<label>Horario:</label>
+<input type="text" id="horario" value="08:00-12:30,14:30-18:00" />
+</div>
+<div class="row">
+<label>Puestos motos:</label>
+<input type="number" id="puestosMotos" value="2" />
+<label>Puestos autos:</label>
+<input type="number" id="puestosAutos" value="3" />
+</div>
+<div class="row">
+<label>Tiempo servicio moto (min):</label>
+<input type="number" id="tiempoMoto" value="20" />
+<label>Tiempo servicio auto (min promedio):</label>
+<input type="number" id="tiempoAuto" value="35" />
+</div>
+<div class="row">
+<label>Hora pico (desde):</label>
+<input type="time" id="horaPico" value="16:00" />
+<label>Factor pico:</label>
+<input type="number" id="factorPico" step="0.1" value="1.5" />
+</div>
+<button type="submit">Ejecutar Simulación</button>
+</form>
+</section>
+
+
+<section id="resultados">
+<h2>Resultados</h2>
+<div id="resumen"></div>
+<div class="tabla-container">
+<table id="tablaResultados">
+<thead>
+<tr>
+<th>Hora llegada</th>
+<th>Tipo Vehículo</th>
+<th>Tipo Orden</th>
+<th>Bahía</th>
+<th>Inicio Servicio</th>
+<th>Fin Servicio</th>
+<th>Espera (min)</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

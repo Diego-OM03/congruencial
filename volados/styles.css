@@ -1,0 +1,234 @@
+/* ===============================
+   Estilos para Volados Multiplayer
+   =============================== */
+
+:root {
+  --bg: #0e1117;
+  --card: #1b1f2a;
+  --accent: #00bcd4;
+  --text: #f0f0f0;
+  --success: #00e676;
+  --danger: #ff5252;
+  --warning: #ffca28;
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a1f2f, #0e1117);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  color: var(--accent);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* --- Lobby --- */
+#pantalla-inicial input {
+  width: 80%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: var(--radius);
+  outline: none;
+  background: #252b3b;
+  color: var(--text);
+  text-align: center;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  font-weight: 600;
+  margin: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: #00acc1;
+}
+
+#codigo-generado {
+  margin-top: 12px;
+  color: var(--warning);
+  font-weight: 600;
+}
+
+/* --- Juego --- */
+.saldo {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.apuesta-input {
+  margin-bottom: 15px;
+}
+
+.apuesta-input input {
+  width: 100px;
+  padding: 6px;
+  border-radius: var(--radius);
+  border: 1px solid #333;
+  background: #252b3b;
+  color: var(--text);
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.choice {
+  background: #252b3b;
+  border: 2px solid var(--accent);
+}
+
+.choice:hover {
+  background: var(--accent);
+}
+
+.coin-wrap {
+  perspective: 800px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd700 0%, #c1a100 70%);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.side {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  border-radius: 50%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: linear-gradient(135deg, #ffeb3b, #fbc02d);
+}
+
+.back {
+  background: linear-gradient(135deg, #fff5c0, #fbc02d);
+  transform: rotateY(180deg);
+}
+
+.result {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.history {
+  text-align: left;
+  margin-top: 15px;
+  max-height: 120px;
+  overflow-y: auto;
+  padding-left: 20px;
+}
+
+.history li {
+  list-style: "🎯 ";
+  margin-bottom: 5px;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  .coin { width: 100px; height: 100px; }
+}
+
+.btn-copiar {
+  background: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-copiar:hover {
+  background: #005ec2;
+}
+.codigo-box {
+  background: #222;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.codigo-box button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.codigo-box button:hover {
+  background: #45a049;
+}
+
+.jugadores {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}

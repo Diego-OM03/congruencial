@@ -1,0 +1,68 @@
+/* styles.css */
+width: 90%;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.row {
+display: flex;
+flex-wrap: wrap;
+gap: 1em;
+margin-bottom: .8em;
+}
+label {
+font-weight: bold;
+flex: 1 1 120px;
+}
+input {
+flex: 1 1 150px;
+padding: .4em;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+button {
+background: #004aad;
+color: white;
+border: none;
+padding: .8em 1.2em;
+border-radius: 8px;
+cursor: pointer;
+width: 100%;
+max-width: 300px;
+margin: auto;
+display: block;
+}
+button:hover {
+background: #0063f7;
+}
+.tabla-container {
+width: 100%;
+overflow-x: auto;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 1em;
+min-width: 600px;
+}
+th, td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
+}
+th {
+background: #004aad;
+color: white;
+}
+
+
+@media (max-width: 768px) {
+.row {
+flex-direction: column;
+}
+input, label {
+width: 100%;
+}
+button {
+width: 100%;
+}
+}

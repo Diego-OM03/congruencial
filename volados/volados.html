@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volados Multiplayer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>🎲 Volados </h1>
+
+  <!-- Pantalla inicial -->
+  <div id="pantalla-inicial">
+    <input type="text" id="nombre" placeholder="Tu nombre">
+    <button id="crear-sala">Crear Sala</button>
+    <input type="text" id="codigo-sala" placeholder="Código de sala">
+    <button id="unirse-sala">Unirse a Sala</button>
+    <div id="codigo-generado"></div>
+  </div>
+
+  <!-- Pantalla de juego -->
+  <div id="juego" style="display:none;">
+    <div class="sala-info" id="sala-info"></div>
+
+    <div class="jugadores">
+      <p><strong>Tú:</strong> <span id="nombre-jugador">-</span></p>
+      <p><strong>Rival:</strong> <span id="nombre-rival">Esperando...</span></p>
+    </div>
+
+<div class="saldo">
+  <span id="saldo-jugador">Saldo : 0</span> 💵 | <span id="saldo-rival">Saldo: 0</span> 💵
+</div>
+
+
+    <div class="apuesta-input">
+      <label for="apuesta">Monto de apuesta:</label>
+      <input type="number" id="apuesta" min="1" value="10">
+    </div>
+
+    <div class="controls">
+      <button class="choice" data-choice="cara">Cara</button>
+      <button class="choice" data-choice="cruz">Cruz</button>
+    </div>
+
+    <div class="coin-wrap">
+      <div class="coin" id="coin">
+        <div class="side front">🪙</div>
+        <div class="side back">💫</div>
+      </div>
+    </div>
+
+    <div class="result" id="result">Esperando apuestas...</div>
+    <ul id="history" class="history"></ul>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
