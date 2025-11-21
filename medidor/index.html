@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Consumo Eléctrico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Registrar Consumo</h2>
+
+<div class="form">
+    <input id="kw" type="number" placeholder="Lectura (kW)">
+    <input id="fecha" type="date">
+    <input id="hora" type="time">
+    <input id="temp" type="number" placeholder="Temperatura (°C)">
+    <button id="btnGuardar">Guardar</button>
+</div>
+
+<h2>Historial</h2>
+<div class="filtros">
+    <label for="campoOrden">Ordenar por:</label>
+    <select id="campoOrden">
+        <option value="none">Sin orden</option>
+        <option value="kw">kW</option>
+        <option value="temperatura">Temperatura</option>
+        <option value="fecha-Hora">Fecha + Hora</option>
+        <option value="fecha">Fecha</option>
+        <option value="hora">Hora</option>
+    </select>
+
+    <label for="direccionOrden">Dirección:</label>
+    <select id="direccionOrden">
+        <option value="none">Sin orden</option>
+        <option value="asc">Menor → Mayor</option>
+        <option value="desc">Mayor → Menor</option>
+    </select>
+</div>
+
+
+<table id="tabla">
+    <thead>
+        <tr>
+            <th>kW</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Temp (°C)</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script type="module">
+    import "./firebaseConfig.js";
+    import "./script.js";
+</script>
+
+</body>
+</html>
