@@ -2,27 +2,28 @@ body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
   text-align: center;
-  padding: 5vw; /* relativo al ancho de pantalla */
+  padding: 5vw;
   margin: 0;
 }
 
 h1 {
   color: #333;
   margin-bottom: 2rem;
-  font-size: clamp(20px, 3vw, 32px); /* mínimo 20px, máximo 32px */
+  font-size: clamp(20px, 3vw, 32px);
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 350px; /* no se estira infinito en PC */
+  max-width: 350px;
   margin: 0 auto;
   width: 100%;
 }
 
+/* Estilos generales para todos los botones */
 .menu button {
-  padding: clamp(10px, 2vw, 16px);  /* adaptable */
+  padding: clamp(10px, 2vw, 16px);
   font-size: clamp(14px, 2vw, 18px);
   border: none;
   border-radius: 8px;
@@ -36,17 +37,19 @@ h1 {
   opacity: 0.9;
 }
 
-.menu button:nth-child(1) {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.menu button:nth-child(2) {
-  background-color: #FF9800;
-  color: white;
-}
-
-.menu button:nth-child(3) {
-  background-color: #2196F3;
-  color: white;
-}
+/* Colores específicos por clase */
+.btn-mixto {
+  background-color: #4CAF50; 
+  color: white; }
+.btn-multiplicar { 
+  background-color: #FF9800; 
+  color: white; }
+.btn-volados {
+  background-color: #2196F3; 
+  color: white; }
+.btn-lavadero { 
+  background-color: #f3216e; 
+  color: white; }
+.btn-medidor { 
+  background-color: #9C27B0; 
+  color: white; }
