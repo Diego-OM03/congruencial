@@ -36,7 +36,7 @@ padding: .4em;
 border-radius: 5px;
 border: 1px solid #ccc;
 }
-button {
+.boton button {
 background: #004aad;
 color: white;
 border: none;
@@ -48,7 +48,7 @@ max-width: 300px;
 margin: auto;
 display: block;
 }
-button:hover {
+.boton button:hover {
 background: #0063f7;
 }
 .tabla-container {
@@ -82,4 +82,33 @@ width: 100%;
 button {
 width: 100%;
 }
+}
+
+.botones {
+  margin-top: 15px;
+  display: flex;
+  justify-content: left; /* Centra los botones */
+  gap: 8px;
+  flex-wrap: wrap; /* Permite que salten a otra fila si no caben */
+}
+/*Boton menu*/
+.botones button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 100px;
+  max-width: 140px; /* Para que no sean enormes */
+  text-align: center;
+}
+
+.botones button {
+  background-color: #0931f7;
+  color: white;
+}
+.botones button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
 }
